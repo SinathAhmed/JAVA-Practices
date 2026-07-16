@@ -1,0 +1,33 @@
+public class twoSum_leetCode {
+    public static void main(String[] args){
+
+            class Solution {
+                public int[] twoSum(int[] nums, int target) { 
+
+                    int[] new_num = new int[2];
+
+                    for (int i = 0; i < nums.length; i++) { 
+                        for (int j = 1; j < nums.length; j++) {
+                            if (nums[i] + nums[j] == target) {
+                                new_num[0] = i;
+                                new_num[1] = j;
+                            }
+                        }
+                    }
+
+                    return new_num;
+                }
+            }
+
+            Solution solution = new Solution();
+
+            int[] nums = {3, 3};
+            int target = 6;
+
+            int[] result = solution.twoSum(nums, target);
+
+            System.out.println("Indices: " + result[0] + ", " + result[1]);
+
+        }
+    }
+
